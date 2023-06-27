@@ -1,24 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./components/layout/header-components/Header";
+import Meals from "./components/layout/meal-components/Meals";
+import { GlobalProvider } from "./store/cart-context/CartStateProvider";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GlobalProvider>
+      <Header />
+      <Meals />
+    </GlobalProvider>
   );
 }
 
