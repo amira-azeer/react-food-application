@@ -1,3 +1,9 @@
+
+@font-face {
+  font-family: 'Roboto'; /* Font family name */
+  src: url('../../../../public/Font/Roboto/Roboto-Light.ttf') format('truetype'); /* Relative path to the font file */
+}
+
 .header {
     width: 100%;
     color: white;
@@ -5,7 +11,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 10%;
+    font-family: 'Roboto' , sans-serif; /* Use the font family defined above */
   }
+
   
   /* .main-image {
     width: 100%;

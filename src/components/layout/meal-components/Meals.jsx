@@ -5,20 +5,10 @@ import { Box, useMediaQuery } from '@mui/material'
 
 // import { getMeals } from '../../../shared/api-calls'
 // import axios from 'axios';
-
-import { useGetMealsQuery } from '../../../shared/RTK-queries'
+// import { useGetMealsQuery } from '../../../shared/RTK-queries'
 
 const Meals = () => {
-    const isNonMobile = useMediaQuery("(min-width: 1000px)");
-
-    const da = useGetMealsQuery()
-    console.log(da)
-
-    const { data, isLoading } = useGetMealsQuery(); 
-    console.log("data", data);
-    console.log(isLoading)
-
-    
+    const isNonMobile = useMediaQuery("(min-width: 1000px)"); 
 
   return (
     <Box 

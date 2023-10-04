@@ -24,7 +24,6 @@ const ModelOverlay = ({ onClick, item, total,  }) => {
         <Button onClick={onClick}>Close</Button>
 
         {item.map((item, index) => {
-          // console.log("ITEMS", item.itemCount)
           return (
             <>
               <ModalCard 

@@ -8,7 +8,7 @@ import { CartStateProvider } from "../../../store/cart-context/CartStateProvider
 
 const MealsCard = ({ id, title, price, src }) => {
   const [ count, setCount ] = React.useState(0);
-  const { addToCart, removeFromCart, } = useContext(CartStateProvider);
+  const { addToCart, removeFromCart } = useContext(CartStateProvider);
 
 
   function addToCartClick() {
@@ -41,6 +41,7 @@ const MealsCard = ({ id, title, price, src }) => {
         <ButtonGroup>
           <Button
             aria-label="reduce"
+            disabled={ count > 0 ? false : true }
             onClick={() => {
               removeFromCart(id);
               setCount(Math.max(count - 1, 0));

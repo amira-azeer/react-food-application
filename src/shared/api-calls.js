@@ -6,7 +6,6 @@ export const getMeals = async () => {
     const data  =  await axios.get('https://react-firebase-75251-default-rtdb.asia-southeast1.firebasedatabase.app/meals.json')
         .then(
             response => { 
-                console.log("DATA", response.data)
                 return response.data
 
             }, error => {

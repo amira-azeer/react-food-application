@@ -13,6 +13,7 @@ export const CartStateReducer = (state, action) => {
             
         case "ADD_TO_CART":
             const updatedAmount = state.totalAmount + action.payload.cartItem.price
+            state.removeButton = false;
             let orderList = [ ...state.items, action.payload.cartItem ]
             orderList = onlyUnique(orderList);
             return {
@@ -35,13 +36,12 @@ export const CartStateReducer = (state, action) => {
 
             if(existingItem.itemCount === 1){
                 updatedOrderList = state.items.filter(item => item.id !== action.payload.id )
-
             } else {
                 const updatedItem = {...existingItem, itemCount: existingItem.itemCount - 1}
                 updatedOrderList = [...state.items]
                 updatedOrderList[existingCartItemIndex] = updatedItem
             }
-                 
+
             return {
                 ...state,
                 cartItemCount : Math.max(state.cartItemCount - 1, 0),

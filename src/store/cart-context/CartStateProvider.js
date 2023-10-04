@@ -44,6 +44,9 @@ export const GlobalProvider = ({ children }) => {
         displayForm: state.displayForm,
         totalAmount : state.totalAmount,
         cartItemCount: state.cartItemCount,
+        
+        removeButton: state.removeButton,
+
         displayFormFunc,
         addToCart,
         removeFromCart,
