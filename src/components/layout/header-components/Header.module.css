@@ -1,30 +1,18 @@
 
 @font-face {
-  font-family: 'Roboto'; /* Font family name */
-  src: url('../../../../public/Font/Roboto/Roboto-Light.ttf') format('truetype'); /* Relative path to the font file */
+  font-family: 'roboto'; /* Font family name */
+  src: url('../../../../public/Font/Roboto/Roboto-Black.ttf') format('truetype'); /* Relative path to the font file */
 }
 
 .header {
-    width: 100%;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10%;
-    font-family: 'Roboto' , sans-serif; /* Use the font family defined above */
-  }
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  font-family: 'roboto' , sans-serif; 
+}
 
   
-  /* .main-image {
-    width: 100%;
-    height: 25rem;
-    z-index: 0;
-    overflow: hidden;
-  }
-  
-  .main-image img {
-    width: 110%;
-    height: 100%;
-    object-fit: cover;
-    transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
-  } */
+ 

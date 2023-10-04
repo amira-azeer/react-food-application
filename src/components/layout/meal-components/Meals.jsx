@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { mealsData } from '../../../data/Data'
 import MealsCard from './MealsCard'
 import { Box, useMediaQuery } from '@mui/material'
@@ -9,7 +9,15 @@ import { Box, useMediaQuery } from '@mui/material'
 
 const Meals = () => {
     const isNonMobile = useMediaQuery("(min-width: 1000px)"); 
+    // let data;
+    // const { data, isLoading } = useGetMealsQuery()
 
+    // useEffect(() => {
+    //   data = getMeals()
+    //   console.log(data)
+    // }, [ data, ])
+
+    
   return (
     <Box 
         mt="20px"
@@ -24,6 +32,10 @@ const Meals = () => {
             mealsData.map(e =>  
                 <MealsCard key={e.id} id={e.id} title={e.name} src={e.src} price={e.price}></MealsCard>   
             ) 
+
+          //   data ? <h1>Loading...</h1>  : data.map(e =>  
+          //     <MealsCard key={e.id} id={e.id} title={e.name} src={e.src} price={e.price}></MealsCard>   
+          // ) 
         }
     </Box>
   )
