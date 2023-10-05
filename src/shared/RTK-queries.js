@@ -10,6 +10,15 @@ export const api = createApi({
         getMeals : build.query({
             query : () => "/meals.json",
             providesTags : ["Meals"],
+        }),
+
+        placeOrder: build.mutation({
+            query : (order) => ({
+                url: '/placeOrder.json',
+                method: 'POST',
+                body: order
+            }),
+            invalidatesTags: ['Meals']
         })
     })
 })
@@ -17,5 +26,5 @@ export const api = createApi({
 
 export const {
     useGetMealsQuery,
-
+    usePlaceOrderMutation,
 } = api
