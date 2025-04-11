@@ -8,8 +8,6 @@ import ModalCard from "../layout/modal-component/ModalCard";
 
 import { usePlaceOrderMutation } from "../../shared/RTK-queries";
 
-
-
 const BackDrop = (props) => {
   return <div className={classes.backdrop} onClick={props.onClick} />;
 };
